@@ -1,0 +1,42 @@
+{
+    "name": "webpack4-configs",
+    "version": "1.0.0",
+    "description": "Configuracion ideal para aplicaciones front JS con salesforce",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:dev": "webpack --config ./webpack-config/webpack.dev.js -w",
+        "build:prod": "webpack --config ./webpack-config/webpack.prod.js",
+        "build:dashboard": "webpack-dashboard -- webpack --config ./webpack-config/webpack.prod.js",
+        "build:stats": "webpack --config ./webpack-config/webpack.prod.js --profile --json > ./webpack-config/stats.json"
+    },
+    "author": "Rodrigo Hinojosa Acuña",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-typescript": "^7.6.0",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.2.0",
+        "mini-css-extract-plugin": "^0.8.0",
+        "node-sass": "^4.12.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "sass-loader": "^8.0.0",
+        "terser-webpack-plugin": "^2.2.1",
+        "ts-loader": "^6.2.1",
+        "tsconfig-paths-webpack-plugin": "^3.2.0",
+        "typescript": "^3.6.4",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dashboard": "^3.2.0",
+        "webpack-fix-style-only-entries": "^0.4.0",
+        "webpack-merge": "^4.2.2"
+    },
+    "browserslist": [
+        "last 2 version",
+        "> 0.25%",
+        "maintained node versions",
+        "not dead"
+    ]
+}
