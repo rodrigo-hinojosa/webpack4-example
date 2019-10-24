@@ -57,9 +57,14 @@ module.exports = {
                     options: {
                         implementation: require('node-sass'),
                     }
-                }
+                },
             ],
-        }, ]
+        },
+        {
+            test: /\.(jpe?g|png|gif|svg|ttf|woff|woff2)$/i,
+            loader: 'file-loader'
+        },
+        ]
     },
     plugins: [
         new FixStyleOnlyEntriesPlugin(),

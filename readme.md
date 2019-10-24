@@ -92,183 +92,188 @@ tslint --init
 *Setear la configuración de tslint para nuestro proyecto --> [documentación](https://palantir.github.io/tslint)**
 ``` js
 {
-	"extends": "tslint:recommended",
-	"rules": {
-		"max-line-length": {
-			"options": [
-				180
-			]
-		},
-		"eofline": false,
-		"arrow-parens": [
-			true,
-			"ban-single-arg-parens"
-		],
-		"no-empty": false,
-		"object-literal-sort-keys": false,
-		"array-type": [
-			true,
-			"generic"
-		],
-		"typedef": [
-			true,
-			"parameter",
-			"call-signature",
-			"property-declaration",
-			"variable-declaration",
-			"member-variable-declaration",
-			"object-destructuring"
-		],
-		"member-access": [
-			true,
-			"no-public"
-		],
-		"trailing-comma": [
-			false,
-			{
-				"multiline": "always",
-				"singleline": "never"
-			}
-		],
-		"quotemark": [
-			true,
-			"single",
-			"jsx-double"
-		],
-		"semicolon": [
-			true,
-			"always",
-			"ignore-bound-class-methods"
-		],
-		"new-parens": true,
-		"no-arg": true,
-		"no-bitwise": true,
-		"no-conditional-assignment": true,
-		"no-consecutive-blank-lines": false,
-		"no-console": {
-			"severity": "warning",
-			"options": [
-				"debug",
-				"info",
-				"log",
-				"time",
-				"timeEnd",
-				"trace"
-			]
-		},
-		"member-ordering": [
-			true,
-			{
-				"order": [
-					"private-static-field",
-					"private-instance-field",
-					"private-constructor",
-					"public-static-field",
-					"public-instance-field",
-					"public-constructor",
-					"public-instance-method",
-					"protected-instance-method",
-					"private-instance-method"
-				],
-				"alphabetize": false
-			}
-		]
-	},
-	"jsRules": {
-		"max-line-length": {
-			"options": [
-				180
-			]
-		}
-	}
+    "extends": "tslint:recommended",
+    "rules": {
+        "max-line-length": {
+            "options": [
+                180
+            ]
+        },
+        "eofline": false,
+        "arrow-parens": [
+            true,
+            "ban-single-arg-parens"
+        ],
+        "no-empty": false,
+        "object-literal-sort-keys": false,
+        "array-type": [
+            true,
+            "generic"
+        ],
+        "typedef": [
+            true,
+            "parameter",
+            "call-signature",
+            "property-declaration",
+            "variable-declaration",
+            "member-variable-declaration",
+            "object-destructuring"
+        ],
+        "member-access": [
+            true,
+            "no-public"
+        ],
+        "trailing-comma": [
+            false,
+            {
+                "multiline": "always",
+                "singleline": "never"
+            }
+        ],
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "semicolon": [
+            true,
+            "always",
+            "ignore-bound-class-methods"
+        ],
+        "new-parens": true,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-conditional-assignment": true,
+        "no-consecutive-blank-lines": false,
+        "no-console": {
+            "severity": "warning",
+            "options": [
+                "debug",
+                "info",
+                "log",
+                "time",
+                "timeEnd",
+                "trace"
+            ]
+        },
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "private-static-field",
+                    "private-instance-field",
+                    "private-constructor",
+                    "public-static-field",
+                    "public-instance-field",
+                    "public-constructor",
+                    "public-instance-method",
+                    "protected-instance-method",
+                    "private-instance-method"
+                ],
+                "alphabetize": false
+            }
+        ]
+    },
+    "jsRules": {
+        "max-line-length": {
+            "options": [
+                180
+            ]
+        }
+    }
 }
 ```
 ## 2- Instalación de webpack, webpack CLI, plugins, loaders generales y dependencias de desarrollo
 + Webpack y webpack CLI --> [documentación](https://webpack.js.org/guides/getting-started/)
 
-	```
-	npm i -D webpack webpack-cli
-	```
+    ```
+    npm i -D webpack webpack-cli
+    ```
 + Dependencia para trabajar preprocesador sass para NodeJs --> [documentación](https://github.com/sass/node-sass)
 
-	```
-	npm i -D node-sass
-	```
+    ```
+    npm i -D node-sass
+    ```
 + Loader para cargar, compilar y transpilar codigo fuente Typescript en JS  --> [documentación](https://webpack.js.org/guides/typescript/#loader)
 
-	```
-	npm i -D ts-loader
-	```
+    ```
+    npm i -D ts-loader
+    ```
 + Dependencia para manejar rutas con typescript --> [documentación](https://github.com/dividab/tsconfig-paths-webpack-plugin)
 
-	```
-	npm i -D tsconfig-paths-webpack-plugin
-	```
+    ```
+    npm i -D tsconfig-paths-webpack-plugin
+    ```
 + Loader css-loader interpreta @import y url () como import / require () --> [documentación](https://webpack.js.org/loaders/css-loader/#root)
 
-	```
-	npm i -D css-loader
-	```
+    ```
+    npm i -D css-loader
+    ```
 + Loader para cargar, compilar y transpilar SCSS en CSS --> [documentación](https://webpack.js.org/loaders/sass-loader/#root)
 
-	```
-	npm i -D sass-loader
-	```
+    ```
+    npm i -D sass-loader
+    ```
 + Plugin para extraer codigo CSS de diferentes fuentes y construir un solo archivo de salida --> [documentación](https://webpack.js.org/plugins/mini-css-extract-plugin/#root)
 
-	```
-	npm i -D mini-css-extract-plugin
-	```
+    ```
+    npm i -D mini-css-extract-plugin
+    ```
++ Loader para revolser diferentes tipos de archivos e incorporarlos al archivo de salida --> [documentación](https://webpack.js.org/loaders/file-loader/#root)
+
+    ```
+    npm i -D file-loader
+    ```    
 + Dependencia core del compilador de Babel --> [documentación](https://babeljs.io/docs/en/usage)
 
-	```
-	npm i -D @babel/core
-	```
+    ```
+    npm i -D @babel/core
+    ```
 + Dependencia de BABEL que permite setear las ultimas versiones de JS sin tener que configurarlas --> [documentación](https://babeljs.io/docs/en/babel-preset-env#docsNav)
 
-	```
-	npm i -D @babel/preset-env
-	```
+    ```
+    npm i -D @babel/preset-env
+    ```
 + Dependencia de BABEL para transpilar TS a JS --> [documentación](https://babeljs.io/docs/en/babel-preset-typescript#docsNav)
 
-	```
-	npm i -D @babel/preset-typescript
-	```
+    ```
+    npm i -D @babel/preset-typescript
+    ```
 + Dependencia de Webpack para transpilar TS a JS --> [documentación](https://webpack.js.org/loaders/babel-loader/#root)
 
-	```
-	npm i -D babel-loader
-	```
+    ```
+    npm i -D babel-loader
+    ```
 + Plugin para limpiar carpeta de archivos de salida cada vez que se ejecuta el proceso de webpack --> [documentación](https://webpack.js.org/guides/output-management/#cleaning-up-the-dist-folder)
 
-	```
-	npm i -D clean-webpack-plugin
-	```
+    ```
+    npm i -D clean-webpack-plugin
+    ```
 + Plugin para minificar archivos JS de salida a producción --> [documentación](https://webpack.js.org/plugins/terser-webpack-plugin/#root)
 
-	```
-	npm i -D terser-webpack-plugin
-	```
+    ```
+    npm i -D terser-webpack-plugin
+    ```
 + Plugin para minificar archivos CSS de salida a producción --> [documentación](https://github.com/NMFR/optimize-css-assets-webpack-plugin)
 
-	```
-	npm i -D optimize-css-assets-webpack-plugin
-	```		
+    ```
+    npm i -D optimize-css-assets-webpack-plugin
+    ```     
 + Dependencia para unir distintas configuraciones de Webpack --> [documentación](https://github.com/survivejs/webpack-merge)
 
-	```
-	npm i -D webpack-merge
-	```
+    ```
+    npm i -D webpack-merge
+    ```
 + Dependencia generar solo archivos de estilo por entry (no genera archivo JS por cada entry) --> [documentación](https://github.com/fqborges/webpack-fix-style-only-entries)
 
-	```
-	npm i -D webpack-fix-style-only-entries
-	```
+    ```
+    npm i -D webpack-fix-style-only-entries
+    ```
 + Dependencia para visualizar dashboard de estadisticas de los archivos de salida (input stats.json) --> [documentación](https://github.com/FormidableLabs/webpack-dashboard)
 
-	```
-	npm i -D webpack-dashboard
-	```
+    ```
+    npm i -D webpack-dashboard
+    ```
 
 ## 3- Configuración de Webpack
 *# Generación del archivo general "webpack.config.js"*
@@ -481,4 +486,27 @@ touch .babelrc
 *archivo sirve como input para visualizadores web --> [web-view](https://webpack.js.org/guides/code-splitting/#bundle-analysis)*
 ```
 webpack --profile --json > stats.json
+```
+## Resume de de la instalación de las dependencias
+```
+npm i -D typescript \
+        webpack \
+        webpack-cli \
+        node-sass \
+        ts-loader \
+        tsconfig-paths-webpack-plugin \
+        css-loader \
+        sass-loader \
+        mini-css-extract-plugin \
+        file-loader \
+        @babel/core \
+        @babel/preset-env \
+        @babel/preset-typescript \
+        babel-loader \
+        clean-webpack-plugin \
+        terser-webpack-plugin \
+        optimize-css-assets-webpack-plugin \
+        webpack-merge \
+        webpack-fix-style-only-entries \
+        webpack-dashboard
 ```
