@@ -487,7 +487,7 @@ touch .babelrc
 ```
 webpack --profile --json > stats.json
 ```
-## Resume de de la instalación de las dependencias
+## Resume de la instalación de las dependencias
 ```
 npm i -D typescript \
         webpack \
