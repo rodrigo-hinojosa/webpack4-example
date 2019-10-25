@@ -259,11 +259,16 @@ tslint --init
     ```
     npm i -D optimize-css-assets-webpack-plugin
     ```     
++ Plugin para comprimir archivos de salida --> [documentación](https://webpack.js.org/plugins/compression-webpack-plugin/)
+
+    ```
+    npm i -D compression-webpack-plugin
+    ```
 + Dependencia para unir distintas configuraciones de Webpack --> [documentación](https://github.com/survivejs/webpack-merge)
 
     ```
     npm i -D webpack-merge
-    ```
+    ```    
 + Dependencia generar solo archivos de estilo por entry (no genera archivo JS por cada entry) --> [documentación](https://github.com/fqborges/webpack-fix-style-only-entries)
 
     ```
@@ -498,6 +503,7 @@ npm i -D typescript \
         css-loader \
         sass-loader \
         mini-css-extract-plugin \
+        compression-webpack-plugin \
         file-loader \
         @babel/core \
         @babel/preset-env \

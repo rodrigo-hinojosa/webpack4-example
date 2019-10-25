@@ -58,4 +58,9 @@ module.exports = WebpackMerge(WebpackConfig, {
             })
         ],
     },
+    plugins: [
+		new CompressionPlugin({
+            cache: true,
+        })
+	],
 });
