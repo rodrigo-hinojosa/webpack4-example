@@ -400,6 +400,7 @@ touch webpack.prod.js
 const WebpackMerge = require('webpack-merge');
 const WebpackConfig = require('./webpack.config.js');
 const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = WebpackMerge(WebpackConfig, {
@@ -457,6 +458,11 @@ module.exports = WebpackMerge(WebpackConfig, {
             })
         ],
     },
+    plugins: [
+		new CompressionPlugin({
+            cache: true,
+        })
+	],
 });
 ```
 ## 4- Configuración de Babel
