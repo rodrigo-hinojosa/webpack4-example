@@ -5,10 +5,10 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build:dev": "webpack --config ./webpack-config/webpack.dev.js -w",
-        "build:prod": "webpack --config ./webpack-config/webpack.prod.js",
-        "build:dashboard": "webpack-dashboard -- webpack --config ./webpack-config/webpack.prod.js",
-        "build:stats": "webpack --config ./webpack-config/webpack.prod.js --profile --json > ./webpack-config/stats.json"
+        "build:dev": "webpack --config ./src/webpack-config/webpack.dev.js -w",
+        "build:prod": "webpack --config ./src/webpack-config/webpack.prod.js",
+        "build:dashboard": "webpack-dashboard -- webpack --config ./src/webpack-config/webpack.prod.js",
+        "build:stats": "webpack --config ./src/webpack-config/webpack.prod.js --profile --json > ./src/webpack-config/stats.json"
     },
     "author": "Rodrigo Hinojosa Acuña",
     "license": "ISC",

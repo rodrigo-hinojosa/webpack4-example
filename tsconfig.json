@@ -59,12 +59,12 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": [
-        "app/ts/*"
+        "src/ts/*"
       ]
     }
   },
   "include": [
-    "app/ts/**/*.ts"
+    "src/ts/**/*.ts"
   ],
   "exclude": [
     "node_modules"
