@@ -378,7 +378,7 @@ const WebpackConfig = require('./webpack.config.js');
 
 module.exports = WebpackMerge(WebpackConfig, {
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     module: {
         rules: [{
             test: /\.ts?$/,
